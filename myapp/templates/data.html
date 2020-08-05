@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <title>List Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: 'http://{{address}}:8000/list/',
+        success: function(data) {
+          $.each(data.images, function(i, ele) {
+            $('<tr>').append(
+              $('<td>').text(i),
+              $('<td>').html("<img src='" + ele.img + "'></img>"),
+              $('<td>').text(ele.box),
+            ).appendTo('#res tbody');
+          })
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+          $('#ans').text(`${textStatus}`);
+        },
+      });
+    });
+  </script>
+</head>
+<body>
+  <h3 id="ans"></h3>
+  <table id="res" border="1">
+    <thead>
+      <tr><td>Id</td><td>Image</td><td>Ground Truth</td></tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</body>
+</html>
