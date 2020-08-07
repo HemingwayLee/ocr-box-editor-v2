@@ -37,13 +37,30 @@
   </script>
 </head>
 <body>
-  <h3 id="ans"></h3>
-  <table id="res" class="table table-bordered">
-    <thead>
-      <tr><td>Id</td><td>Image</td><td>Image with box</td><td>OCR result</td><td>Ground Truth</td><td>Box file content</td></tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand" style="font-weight: bold" href="#">Tesseract OCR Training Data Creator</span>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="http://127.0.0.1:8000/">Home</a></li>
+        <li class="active"><a href="#">Data</a></li>
+        <li><a href="#">Charts</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row inputrow">
+      <div class="col-md-12">
+        <table id="res" class="table table-bordered">
+          <thead>
+            <tr><td>Id</td><td>Image</td><td>Image with box</td><td>OCR result</td><td>Ground Truth</td><td>Box file content</td></tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
