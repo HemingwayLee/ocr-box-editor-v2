@@ -30,7 +30,7 @@ def processImage(request):
         fss.save(os.path.splitext(path)[0] + ".png", myfile) # Save another png file for display
         
         # calling and waiting
-        call(["scripts/generator.sh", path, "eng"])
+        call(["scripts/generator.sh", path, "jpn"])
 
         with open(os.path.splitext(path)[0] + ".box", encoding="utf-8") as boxfile:
             x = [l.rstrip("\n") for l in boxfile] 
@@ -76,7 +76,7 @@ def listFiles(request):
                 x = [l.rstrip("\n") for l in boxfile] 
             
             img = cv2.imread(os.path.splitext(path)[0] + ".tif")
-            result = pytesseract.image_to_string(img, config="--psm 6", lang="eng")
+            result = pytesseract.image_to_string(img, config="--psm 6", lang="jpn")
 
             item = {
                 "img": "http://127.0.0.1:8000/media/" + filename,
