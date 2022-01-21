@@ -1,4 +1,4 @@
-# ocr-box-editor-v2
+# label-editor-v2
 
 ## Editor
 ![gui](images/gui.png)
