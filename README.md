@@ -1,4 +1,6 @@
 # ocr-box-editor-v2
+* This is a web application to generate training data for tesseract
+
 ## prerequisite
 * install `tesseract`
 * install `python3` and `virtualenv`
