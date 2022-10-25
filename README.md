@@ -12,15 +12,3 @@
 for f in *.png; do mv -- "$f" "${f%.png}.tif"; done
 ```
 
-
-
-# TODO
-* support other annotation
-* seperate annotation and prediction
-  * self improved system with more data
-* backend decisions
-  * tensorflow serving
-  * tesseract service
-  * django/flask backend
-    * easier to do the postprocessing
-    * the backend can be scaled up seperately
