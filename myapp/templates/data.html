@@ -17,14 +17,14 @@
         url: 'http://{{address}}:8000/list/',
         success: function(data) {
           $.each(data.images, function(i, ele) {
-            const colorCode = (ele.ori == ele.box) ? "#ABEBC6" : "#F5B7B1";
+            const colorCode = (ele.ori.trim() == ele.box.trim()) ? "#ABEBC6" : "#F5B7B1";
 
             $(`<tr style="background-color:${colorCode}">`).append(
               $('<td>').text(i),
               $('<td>').html("<img src='" + ele.img + "'></img>"),
               $('<td>').html("<img src='" + ele.img2 + "'></img>"),
-              $('<td>').text(ele.ori),
-              $('<td>').text(ele.box),
+              $('<td>').text(ele.ori.trim()),
+              $('<td>').text(ele.box.trim()),
               $('<td>').text(ele.content),
             ).appendTo('#res tbody');
           })
