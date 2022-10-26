@@ -1,7 +1,7 @@
 # ocr-box-editor-v2
 * This is a web application to generate training data for tesseract by the following steps
   * Upload images 
-  * Edit labels for the uploaded images (text and bounding box coordinates)
+  * Edit labels (text and bounding box coordinates) for the uploaded images 
   * Save images and corresponding labels to backend
 * After we collect training data, we can retrain tesseract 
 
@@ -26,7 +26,7 @@ python3 manage.py runserver
 
 ## Editor
 * Upload images and click `Process Image` button to generate default labels
-* Edit labels for the uploaded images (text and bounding box coordinates)
+* Edit labels (text and bounding box coordinates) for the uploaded images 
 * Save images and corresponding labels (in `.box` file extension) to backend
 ![gui](images/gui.png)
 
