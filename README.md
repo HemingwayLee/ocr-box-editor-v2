@@ -1,4 +1,5 @@
 # ocr-box-editor-v2
+* This project is modified from [tesseract-web-box-editor](https://github.com/junkka/tesseract-web-box-editor). WordStr boxfile format is supported in this project
 * This is a web application to generate training data for tesseract by the following steps
   * Upload images 
   * Edit labels (text and bounding box coordinates) for the uploaded images 
