@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: /home/proj/scripts/init.sh
+    environment:
+      DJANGO_USER: root
+      DJANGO_PASS: rootroot
+      PYTHONUNBUFFERED: 1
+    volumes:
+      - ./:/home/proj/
+    ports:
+      - "8000:8000"
+
